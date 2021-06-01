@@ -1,0 +1,49 @@
+dependencies {
+    //UI
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.core:core-ktx:1.5.0'
+    implementation 'com.google.android.material:material:1.3.0'
+
+    // MultiDex
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    // Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
+
+    //Test
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // Paging
+    implementation "androidx.paging:paging-runtime-ktx:2.1.2"
+
+    // Recycler View & Card View
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // Circle Image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // Photo Viewer
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    // Multi State View
+    implementation  'com.github.Kennyc1012:MultiStateView:2.2.0'
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    // Koin
+    implementation "org.koin:koin-core:2.1.6"
+    implementation "org.koin:koin-android:2.1.6"
+    implementation "org.koin:koin-android-viewmodel:2.1.6"
+
+    // Play Core
+    implementation "com.google.android.play:core:1.9.0"
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_custom_ripple"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="@dimen/dimens_16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgItemCatalogue"
+        android:layout_width="@dimen/dimens_0dp"
+        android:layout_height="@dimen/dimen_120dp"
+        android:scaleType="fitXY"
+        app:layout_constraintDimensionRatio="450:576"
+        app:layout_constraintEnd_toStartOf="@id/tvTitleItemCatalogue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleItemCatalogue"
+        style="@style/MadeMovieAppText.Bold.White"
+        android:layout_width="@dimen/dimens_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_8dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        android:layout_marginBottom="@dimen/dimens_8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textSize="@dimen/text_size_18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgItemCatalogue"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/ratingBarItemCatalogue"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_8dp"
+        android:numStars="5"
+        android:rating="3.5"
+        android:stepSize="0.2"
+        android:theme="@style/MadeMovieAppRatingBar"
+        app:layout_constraintStart_toEndOf="@id/imgItemCatalogue"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleItemCatalogue" />
+
+    <TextView
+        android:id="@+id/tvDateItemCatalogue"
+        style="@style/MadeMovieAppText.DarkGrey"
+        android:layout_width="@dimen/dimens_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_16dp"
+        android:layout_marginTop="@dimen/dimens_8dp"
+        android:layout_marginEnd="@dimen/dimens_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgItemCatalogue"
+        app:layout_constraintTop_toBottomOf="@id/ratingBarItemCatalogue"
+        tools:text="Release Date" />
+
+    <ProgressBar
+        android:id="@+id/pbItemCatalogue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/imgItemCatalogue"
+        app:layout_constraintEnd_toEndOf="@id/imgItemCatalogue"
+        app:layout_constraintTop_toTopOf="@id/imgItemCatalogue"
+        app:layout_constraintBottom_toBottomOf="@id/imgItemCatalogue"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

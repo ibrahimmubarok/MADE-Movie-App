@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MadeMovieApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_movie">Movie</string>
+    <string name="title_tvshow">Tv Show</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_cataloguefavorite">CatalogueFavorite</string>
+    <string name="label_add_movie_to_favorite">Silahkan tambahkan film ke daftar favorite</string>
+    <string name="label_tvshow_to_favorite">Silahkan tambahkan tv show ke daftar favorite</string>
+</resources>

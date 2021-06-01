@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MadeMovieAppText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="MadeMovieAppText.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="MadeMovieAppText.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MadeMovieAppText.DarkGrey">
+        <item name="android:textColor">@color/color_grey_1</item>
+    </style>
+
+    <style name="MadeMovieAppText.Blue">
+        <item name="android:textColor">@color/color_blue</item>
+    </style>
+
+    <style name="MadeMovieAppText.Cream">
+        <item name="android:textColor">@color/color_cream</item>
+    </style>
+
+    <style name="MadeMovieAppText.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MadeMovieAppText.Bold.DarkGrey">
+        <item name="android:textColor">@color/color_grey_1</item>
+    </style>
+
+    <style name="MadeMovieAppText.Bold.Cream">
+        <item name="android:textColor">@color/color_grey_1</item>
+    </style>
+
+    <style name="MadeMovieAppText.Bold.White.Center">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="MadeMovieAppText.White.Center">
+        <item name="android:textAlignment">center</item>
+    </style>
+
+</resources>

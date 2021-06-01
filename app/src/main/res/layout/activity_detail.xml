@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_black_blue"
+            android:visibility="visible"
+            tools:context=".presentation.detail.DetailActivity">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBackdropDetail"
+                android:layout_width="@dimen/dimens_0dp"
+                android:layout_height="@dimen/dimens_0dp"
+                android:background="@color/color_grey_2"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="16:12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                style="@style/MadeMovieAppCardView"
+                android:layout_width="@dimen/dimens_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_16dp"
+                android:layout_marginTop="@dimen/dimens_235dp"
+                android:layout_marginEnd="@dimen/dimens_16dp"
+                android:layout_marginBottom="@dimen/dimens_16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dimens_16dp"
+                    android:paddingEnd="@dimen/dimens_16dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDetailTitle"
+                        style="@style/MadeMovieAppText.Bold.DarkGrey"
+                        android:layout_width="@dimen/dimens_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_36dp"
+                        android:layout_marginBottom="@dimen/dimens_4dp"
+                        android:textSize="@dimen/text_size_24sp"
+                        app:layout_constraintEnd_toStartOf="@id/btnFavorite"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@string/label_title" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btnFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_36dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_bookmark"
+                        app:layout_constraintBottom_toBottomOf="@id/tvDetailTitle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDetailRating"
+                        style="@style/MadeMovieAppText.Bold.Cream"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvDetailTitle"
+                        tools:text="8.5" />
+
+                    <androidx.appcompat.widget.AppCompatRatingBar
+                        android:id="@+id/ratingBarDetail"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimens_8dp"
+                        android:layout_marginTop="@dimen/dimens_8dp"
+                        android:numStars="5"
+                        android:rating="3.5"
+                        android:stepSize="0.2"
+                        android:theme="@style/MadeMovieAppRatingBar"
+                        app:layout_constraintStart_toEndOf="@id/tvDetailRating"
+                        app:layout_constraintTop_toBottomOf="@id/tvDetailTitle" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDetailRelease"
+                        style="@style/MadeMovieAppText.DarkGrey"
+                        android:layout_width="@dimen/dimens_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_8dp"
+                        android:textSize="@dimen/text_size_14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ratingBarDetail"
+                        tools:text="@string/label_release" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDetailDesc"
+                        style="@style/MadeMovieAppText.DarkGrey"
+                        android:layout_width="@dimen/dimens_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_16dp"
+                        android:layout_marginBottom="@dimen/dimens_16dp"
+                        android:textSize="@dimen/text_size_14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvDetailRelease"
+                        tools:text="@string/label_overview" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/layout_toolbar" />
+
+            <ProgressBar
+                android:id="@+id/pbBanner"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="@id/imgBackdropDetail"
+                app:layout_constraintEnd_toEndOf="@id/imgBackdropDetail"
+                app:layout_constraintStart_toStartOf="@id/imgBackdropDetail"
+                app:layout_constraintTop_toTopOf="@id/imgBackdropDetail" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
