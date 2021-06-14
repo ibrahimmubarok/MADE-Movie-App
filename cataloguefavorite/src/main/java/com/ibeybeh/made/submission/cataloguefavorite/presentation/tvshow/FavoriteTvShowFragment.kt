@@ -80,7 +80,8 @@ class FavoriteTvShowFragment : Fragment(), TvShowCallback {
     }
 
     override fun onDestroyView() {
-        super.onDestroyView()
+        favoriteTvShowBinding?.rvTvShow?.adapter = null
         favoriteTvShowBinding = null
+        super.onDestroyView()
     }
 }

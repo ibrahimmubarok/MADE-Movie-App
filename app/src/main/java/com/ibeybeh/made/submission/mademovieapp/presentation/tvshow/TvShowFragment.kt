@@ -88,8 +88,9 @@ class TvShowFragment : Fragment(), TvShowCallback {
     }
 
     override fun onDestroyView() {
-        super.onDestroyView()
+        tvShowBinding?.rvTvShow?.adapter = null
         tvShowBinding = null
+        super.onDestroyView()
     }
 
     override fun tvShowOnClicked(tvShow: TvShow) {

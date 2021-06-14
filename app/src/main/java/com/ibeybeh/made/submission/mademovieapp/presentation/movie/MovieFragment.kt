@@ -91,8 +91,9 @@ class MovieFragment : Fragment(), MovieCallback {
     }
 
     override fun onDestroyView() {
-        super.onDestroyView()
+        movieBinding?.rvMovie?.adapter = null
         movieBinding = null
+        super.onDestroyView()
     }
 
     override fun movieOnClicked(data: Movie) {

@@ -8,6 +8,9 @@ import com.ibeybeh.made.submission.core.data.remote.RemoteDataSource
 import com.ibeybeh.made.submission.core.data.remote.network.ApiService
 import com.ibeybeh.made.submission.core.domain.repository.ICatalogueRepository
 import com.ibeybeh.made.submission.core.utils.AppExecutors
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -20,19 +23,26 @@ import java.util.concurrent.TimeUnit.SECONDS
 val databaseModule = module {
     factory { get<CatalogueDatabase>().catalogueDao() }
     single {
+        val passphrase: ByteArray = SQLiteDatabase.getBytes("ibeybeh".toCharArray())
+        val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
             CatalogueDatabase::class.java, "Catalogue.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration().openHelperFactory(factory).build()
     }
 }
 
 val networkModule = module {
     single {
+        val hostname = "api.themoviedb.org"
+        val certificatePinner = CertificatePinner.Builder()
+            .add(hostname, "sha256/+vqZVAzTqUP8BGkfl88yU7SQ3C8J2uNEa55B7RZjEg0=")
+            .build()
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .connectTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, SECONDS)
+            .certificatePinner(certificatePinner)
             .build()
     }
     single {

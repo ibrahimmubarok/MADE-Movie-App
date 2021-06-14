@@ -79,7 +79,8 @@ class FavoriteMovieFragment : Fragment(), MovieCallback {
     }
 
     override fun onDestroyView() {
-        super.onDestroyView()
+        favoriteMovieBinding?.rvMovie?.adapter = null
         favoriteMovieBinding = null
+        super.onDestroyView()
     }
 }

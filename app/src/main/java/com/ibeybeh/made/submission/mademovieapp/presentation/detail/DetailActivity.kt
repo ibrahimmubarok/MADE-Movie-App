@@ -97,7 +97,7 @@ class DetailActivity : AppCompatActivity() {
             )
         }
 
-        var statusFav = tvShow.isFavorite ?: false
+        var statusFav = tvShow.isFavorite
         setStatusFavorite(statusFav)
         detailBinding?.btnFavorite?.setOnClickListener {
             statusFav = !statusFav
