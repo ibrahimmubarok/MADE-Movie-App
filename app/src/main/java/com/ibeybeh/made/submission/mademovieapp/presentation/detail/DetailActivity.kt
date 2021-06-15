@@ -15,7 +15,7 @@ import com.ibeybeh.made.submission.mademovieapp.presentation.detail.viewmodel.De
 import com.ibeybeh.made.submission.mademovieapp.utils.Const.EXTRA_CLASSNAME
 import com.ibeybeh.made.submission.mademovieapp.utils.Const.EXTRA_MOVIE
 import com.ibeybeh.made.submission.mademovieapp.utils.Const.EXTRA_TV_SHOW
-import com.ibeybeh.made.submission.mademovieapp.utils.ext.setImageUrl
+import com.ibeybeh.made.submission.core.utils.ext.setImageUrl
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class DetailActivity : AppCompatActivity() {
@@ -87,7 +87,7 @@ class DetailActivity : AppCompatActivity() {
         detailBinding?.tvDetailRelease?.text = tvShow.firstAirDate
 
         val rating = tvShow.voteAverage.div(2)
-        detailBinding?.ratingBarDetail?.rating = rating.toFloat() ?: 0F
+        detailBinding?.ratingBarDetail?.rating = rating.toFloat()
 
         detailBinding?.pbBanner?.let {
             detailBinding?.imgBackdropDetail?.setImageUrl(

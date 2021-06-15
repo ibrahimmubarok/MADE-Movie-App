@@ -18,7 +18,7 @@ import com.ibeybeh.made.submission.mademovieapp.presentation.detail.DetailActivi
 import com.ibeybeh.made.submission.mademovieapp.presentation.movie.viewmodel.MovieViewModel
 import com.ibeybeh.made.submission.mademovieapp.utils.Const.EXTRA_CLASSNAME
 import com.ibeybeh.made.submission.mademovieapp.utils.Const.EXTRA_MOVIE
-import com.ibeybeh.made.submission.mademovieapp.utils.ext.setVisibility
+import com.ibeybeh.made.submission.core.utils.ext.setVisibility
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class MovieFragment : Fragment(), MovieCallback {

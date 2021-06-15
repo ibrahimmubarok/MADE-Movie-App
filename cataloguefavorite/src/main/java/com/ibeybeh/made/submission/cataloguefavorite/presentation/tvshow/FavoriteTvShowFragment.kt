@@ -16,7 +16,7 @@ import com.ibeybeh.made.submission.core.presentation.adapter.TvShowAdapter
 import com.ibeybeh.made.submission.core.presentation.adapter.TvShowAdapter.TvShowCallback
 import com.ibeybeh.made.submission.mademovieapp.presentation.detail.DetailActivity
 import com.ibeybeh.made.submission.mademovieapp.utils.Const
-import com.ibeybeh.made.submission.mademovieapp.utils.ext.setVisibility
+import com.ibeybeh.made.submission.core.utils.ext.setVisibility
 import kotlinx.android.synthetic.main.layout_empty_view.tvDescEmpty
 import org.koin.android.viewmodel.ext.android.viewModel
 
