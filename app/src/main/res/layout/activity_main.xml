@@ -7,7 +7,7 @@
     tools:context=".home.MainActivity">
 
     <include
-        android:id="@+id/main_toolbar"
+        android:id="@+id/mainToolbar"
         layout="@layout/layout_main_toolbar"/>
 
     <fragment

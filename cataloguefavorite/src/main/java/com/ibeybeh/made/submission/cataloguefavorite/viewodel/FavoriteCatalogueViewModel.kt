@@ -16,12 +16,4 @@ class FavoriteCatalogueViewModel(private val catalogueUseCase: CatalogueUseCase)
     fun getFavoriteTvShows(): LiveData<List<TvShow>> {
         return catalogueUseCase.getFavoriteTvShows().asLiveData()
     }
-
-    fun setFavoriteMovie(movie: Movie) {
-        catalogueUseCase.setFavoriteMovie(movie)
-    }
-
-    fun setFavoriteTvShow(tvShow: TvShow) {
-        catalogueUseCase.setFavoriteTvShow(tvShow)
-    }
 }

@@ -11,7 +11,6 @@ import com.ibeybeh.made.submission.core.data.Resource
 import com.ibeybeh.made.submission.core.domain.model.Movie
 import com.ibeybeh.made.submission.core.presentation.adapter.MoviesAdapter
 import com.ibeybeh.made.submission.core.presentation.adapter.MoviesAdapter.MovieCallback
-import com.ibeybeh.made.submission.mademovieapp.BuildConfig
 import com.ibeybeh.made.submission.mademovieapp.R
 import com.ibeybeh.made.submission.mademovieapp.databinding.FragmentMovieBinding
 import com.ibeybeh.made.submission.mademovieapp.presentation.detail.DetailActivity
@@ -55,7 +54,7 @@ class MovieFragment : Fragment(), MovieCallback {
     }
 
     private fun getAllMovies() {
-        movieViewModel.getAllMovies(BuildConfig.API_KEY, 1, "en-US").observe(viewLifecycleOwner, { movies ->
+        movieViewModel.getAllMovies("224f6797a2665e28bce03b9e0655510a", 1, "en-US").observe(viewLifecycleOwner, { movies ->
             if (movies != null) {
                 when (movies) {
                     is Resource.Loading -> {
@@ -75,7 +74,7 @@ class MovieFragment : Fragment(), MovieCallback {
 
                         movieBinding?.layoutError?.tvDescError?.text = movies.message
                         movieBinding?.layoutError?.btnError?.setOnClickListener {
-                            movieViewModel.getAllMovies(BuildConfig.API_KEY, 1, "en-US")
+                            movieViewModel.getAllMovies("224f6797a2665e28bce03b9e0655510a", 1, "en-US")
                         }
                     }
                 }

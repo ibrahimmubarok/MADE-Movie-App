@@ -1,47 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/errorLayout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_black_blue"
     android:visibility="gone">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/tvTitleError"
+        style="@style/MadeMovieAppText.Bold.White.Center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:layout_margin="@dimen/dimens_8dp"
+        android:layout_marginTop="@dimen/dimens_10dp"
+        android:text="@string/label_terjadi_kesalahan"
+        android:textSize="@dimen/text_size_18sp" />
 
-        <TextView
-            android:id="@+id/tvTitleError"
-            style="@style/MadeMovieAppText.Bold.White.Center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dimens_8dp"
-            android:layout_marginTop="@dimen/dimens_10dp"
-            android:text="@string/label_terjadi_kesalahan"
-            android:textSize="@dimen/text_size_18sp" />
+    <TextView
+        android:id="@+id/tvDescError"
+        style="@style/MadeMovieAppText.White.Center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitleError"
+        android:layout_margin="@dimen/dimens_8dp"
+        android:text="@string/label_deskripsi"
+        android:textSize="@dimen/text_size_14sp" />
 
-        <TextView
-            android:id="@+id/tvDescError"
-            style="@style/MadeMovieAppText.White.Center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dimens_8dp"
-            android:text="@string/label_deskripsi"
-            android:textSize="@dimen/text_size_14sp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnError"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/dimens_8dp"
-            android:padding="@dimen/dimens_8dp"
-            android:text="@string/button_coba_lagi"
-            android:textAllCaps="false" />
-
-    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescError"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimens_8dp"
+        android:padding="@dimen/dimens_8dp"
+        android:text="@string/button_coba_lagi"
+        android:textAllCaps="false" />
 
 </RelativeLayout>

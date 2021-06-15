@@ -5,7 +5,6 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import com.google.android.material.snackbar.Snackbar
 import com.ibeybeh.made.submission.core.domain.model.Movie
 import com.ibeybeh.made.submission.core.domain.model.TvShow
 import com.ibeybeh.made.submission.core.utils.emptyString
@@ -77,7 +76,7 @@ class DetailActivity : AppCompatActivity() {
             statusFav = !statusFav
             detailCatalogueViewModel.setFavoriteMovie(movie)
             setStatusFavorite(statusFav)
-            showSnackBar(statusFav)
+            showToast(statusFav)
         }
     }
 
@@ -106,7 +105,7 @@ class DetailActivity : AppCompatActivity() {
                 detailCatalogueViewModel.setFavoriteTvShow(data)
             }
             setStatusFavorite(statusFav)
-            showSnackBar(statusFav)
+            showToast(statusFav)
         }
     }
 
@@ -127,11 +126,11 @@ class DetailActivity : AppCompatActivity() {
         return true
     }
 
-    private fun showSnackBar(boolean: Boolean) {
+    private fun showToast(boolean: Boolean) {
         if (boolean) {
-            Snackbar.make(findViewById(android.R.id.content), string.action_berhasil_menambahkan, Snackbar.LENGTH_SHORT).show()
-        }else{
-            Snackbar.make(findViewById(android.R.id.content), string.action_berhasil_dihapus, Snackbar.LENGTH_SHORT).show()
+            Toast.makeText(this, getString(string.action_berhasil_menambahkan), Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, getString(string.action_berhasil_dihapus), Toast.LENGTH_SHORT).show()
         }
     }
 }

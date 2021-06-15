@@ -14,9 +14,7 @@ import com.bumptech.glide.request.target.Target
 fun View.setVisibility(boolean: Boolean) {
     if (boolean) {
         this.visibility = View.VISIBLE
-    } else {
-        this.visibility = View.GONE
-    }
+    }else this.visibility = View.GONE
 }
 
 fun ImageView.setImageUrl(context: Context, imgUrl: String, progressBar: ProgressBar) {

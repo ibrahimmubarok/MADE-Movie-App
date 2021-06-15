@@ -13,9 +13,9 @@ import com.ibeybeh.made.submission.cataloguefavorite.viewodel.FavoriteCatalogueV
 import com.ibeybeh.made.submission.core.domain.model.Movie
 import com.ibeybeh.made.submission.core.presentation.adapter.MoviesAdapter
 import com.ibeybeh.made.submission.core.presentation.adapter.MoviesAdapter.MovieCallback
+import com.ibeybeh.made.submission.core.utils.ext.setVisibility
 import com.ibeybeh.made.submission.mademovieapp.presentation.detail.DetailActivity
 import com.ibeybeh.made.submission.mademovieapp.utils.Const
-import com.ibeybeh.made.submission.core.utils.ext.setVisibility
 import kotlinx.android.synthetic.main.layout_empty_view.tvDescEmpty
 import org.koin.android.viewmodel.ext.android.viewModel
 

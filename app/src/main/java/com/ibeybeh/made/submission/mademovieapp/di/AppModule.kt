@@ -5,8 +5,6 @@ import com.ibeybeh.made.submission.core.domain.usecase.CatalogueUseCase
 import com.ibeybeh.made.submission.mademovieapp.presentation.detail.viewmodel.DetailViewModel
 import com.ibeybeh.made.submission.mademovieapp.presentation.movie.viewmodel.MovieViewModel
 import com.ibeybeh.made.submission.mademovieapp.presentation.tvshow.viewmodel.TvShowViewModel
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.FlowPreview
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

@@ -11,13 +11,12 @@ import com.ibeybeh.made.submission.core.data.Resource
 import com.ibeybeh.made.submission.core.domain.model.TvShow
 import com.ibeybeh.made.submission.core.presentation.adapter.TvShowAdapter
 import com.ibeybeh.made.submission.core.presentation.adapter.TvShowAdapter.TvShowCallback
-import com.ibeybeh.made.submission.mademovieapp.BuildConfig
+import com.ibeybeh.made.submission.core.utils.ext.setVisibility
 import com.ibeybeh.made.submission.mademovieapp.R
 import com.ibeybeh.made.submission.mademovieapp.databinding.FragmentTvShowBinding
 import com.ibeybeh.made.submission.mademovieapp.presentation.detail.DetailActivity
 import com.ibeybeh.made.submission.mademovieapp.presentation.tvshow.viewmodel.TvShowViewModel
 import com.ibeybeh.made.submission.mademovieapp.utils.Const
-import com.ibeybeh.made.submission.core.utils.ext.setVisibility
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class TvShowFragment : Fragment(), TvShowCallback {
@@ -59,7 +58,7 @@ class TvShowFragment : Fragment(), TvShowCallback {
     }
 
     private fun getAllTvShows() {
-        tvShowViewModel.getAllTvShows(BuildConfig.API_KEY, 1, "en-US").observe(viewLifecycleOwner, { tvShow ->
+        tvShowViewModel.getAllTvShows("224f6797a2665e28bce03b9e0655510a", 1, "en-US").observe(viewLifecycleOwner, { tvShow ->
             if (tvShow != null) {
                 when (tvShow) {
                     is Resource.Loading -> {
@@ -79,7 +78,7 @@ class TvShowFragment : Fragment(), TvShowCallback {
 
                         tvShowBinding?.layoutError?.tvDescError?.text = tvShow.message
                         tvShowBinding?.layoutError?.btnError?.setOnClickListener {
-                            tvShowViewModel.getAllTvShows(BuildConfig.API_KEY, 1, "en-US")
+                            tvShowViewModel.getAllTvShows("224f6797a2665e28bce03b9e0655510a", 1, "en-US")
                         }
                     }
                 }

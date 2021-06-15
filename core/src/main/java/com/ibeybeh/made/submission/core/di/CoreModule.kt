@@ -17,7 +17,6 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeUnit.SECONDS
 
 val databaseModule = module {
@@ -40,7 +39,7 @@ val networkModule = module {
             .build()
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
-            .connectTimeout(120, TimeUnit.SECONDS)
+            .connectTimeout(120, SECONDS)
             .readTimeout(120, SECONDS)
             .certificatePinner(certificatePinner)
             .build()

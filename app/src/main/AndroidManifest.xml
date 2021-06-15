@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MadeMovieApp">
-        <activity android:name="com.ibeybeh.made.submission.mademovieapp.presentation.detail.DetailActivity"></activity>
+        <activity android:name="com.ibeybeh.made.submission.mademovieapp.presentation.detail.DetailActivity" />
         <activity android:name=".home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

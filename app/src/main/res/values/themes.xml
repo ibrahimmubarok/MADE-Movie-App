@@ -11,6 +11,7 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:colorBackground">@color/color_black_blue</item>
         <!-- Customize your theme here. -->
     </style>
 
@@ -21,22 +22,6 @@
         <item name="cardBackgroundColor">@color/white</item>
         <item name="cardElevation">@dimen/dimens_0dp</item>
         <item name="cardCornerRadius">@dimen/dimens_6dp</item>
-    </style>
-
-    <style name="MadeMovieAppTabLayout" parent="Widget.MaterialComponents.TabLayout">
-        <item name="tabTextColor">@color/white</item>
-        <item name="tabIndicator">@color/white</item>
-        <item name="android:background">@android:color/transparent</item>
-        <item name="tabMode">fixed</item>
-        <item name="tabGravity">center</item>
-        <item name="tabSelectedTextColor">@color/white</item>
-    </style>
-
-    <style name="MadeMovieAppTabLayout.TextAppearance" parent="android:TextAppearance.Widget.TabWidget">
-        <item name="textAllCaps">false</item>
-        <item name="android:textAllCaps">false</item>
-        <item name="android:fontFamily">@font/roboto_bold</item>
-        <item name="android:textSize">@dimen/text_size_18sp</item>
     </style>
 
     <style name="MadeMovieAppToolbar" parent="Theme.AppCompat.Light">
@@ -51,12 +36,4 @@
         <item name="colorControlActivated">@color/color_cream</item>
     </style>
 
-    <style name="MadeMovieAppTabLayout." parent="Widget.MaterialComponents.TabLayout">
-        <item name="tabTextColor">@color/color_grey_1</item>
-        <item name="tabIndicator">@color/white</item>
-        <item name="android:background">@color/color_black_blue</item>
-        <item name="tabMode">fixed</item>
-        <item name="tabGravity">fill</item>
-        <item name="tabSelectedTextColor">@color/white</item>
-    </style>
 </resources>

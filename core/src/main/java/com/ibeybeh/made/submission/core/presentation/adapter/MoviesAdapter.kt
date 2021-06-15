@@ -54,6 +54,7 @@ class MoviesAdapter(
     override fun getItemCount(): Int = data.size
 
     interface MovieCallback {
+
         fun movieOnClicked(data: Movie)
     }
 }
