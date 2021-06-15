@@ -17,7 +17,7 @@ import com.ibeybeh.made.submission.mademovieapp.databinding.FragmentTvShowBindin
 import com.ibeybeh.made.submission.mademovieapp.presentation.detail.DetailActivity
 import com.ibeybeh.made.submission.mademovieapp.presentation.tvshow.viewmodel.TvShowViewModel
 import com.ibeybeh.made.submission.mademovieapp.utils.Const
-import com.ibeybeh.made.submission.mademovieapp.utils.ext.setVisibility
+import com.ibeybeh.made.submission.core.utils.ext.setVisibility
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class TvShowFragment : Fragment(), TvShowCallback {

@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ibeybeh.made.submission.core.R
 import com.ibeybeh.made.submission.core.databinding.ItemRowListBinding
 import com.ibeybeh.made.submission.core.domain.model.Movie
-import com.ibeybeh.made.submission.mademovieapp.utils.ext.setImageUrl
+import com.ibeybeh.made.submission.core.utils.ext.setImageUrl
 
 class MoviesAdapter(
     private var data: MutableList<Movie>,

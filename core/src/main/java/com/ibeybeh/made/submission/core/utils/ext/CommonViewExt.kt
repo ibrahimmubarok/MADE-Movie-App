@@ -1,4 +1,4 @@
-package com.ibeybeh.made.submission.mademovieapp.utils.ext
+package com.ibeybeh.made.submission.core.utils.ext
 
 import android.content.Context
 import android.graphics.drawable.Drawable
