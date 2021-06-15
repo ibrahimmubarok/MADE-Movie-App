@@ -90,17 +90,17 @@ class MovieFragment : Fragment(), MovieCallback {
         }
     }
 
-    override fun onDestroyView() {
-        movieBinding?.rvMovie?.adapter = null
-        movieBinding = null
-        super.onDestroyView()
-    }
-
     override fun movieOnClicked(data: Movie) {
         val classname = resources.getString(R.string.title_movie)
         startActivity(Intent(requireContext(), DetailActivity::class.java).apply {
             putExtra(EXTRA_MOVIE, data)
             putExtra(EXTRA_CLASSNAME, classname)
         })
+    }
+
+    override fun onDestroyView() {
+        movieBinding?.rvMovie?.adapter = null
+        movieBinding = null
+        super.onDestroyView()
     }
 }
